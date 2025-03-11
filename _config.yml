@@ -28,23 +28,17 @@ url: "https://0xk3r0.github.io"
 github:
   username: 0xk3r0 # change to your GitHub username
 
-
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: 0xk3r0
+  email: keronady884@gmail.com # change to your email address
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/0xk3r0 # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/kyrillosnady
 
 # The CDN endpoint for media resources
 # the avatar on sidebar, support local or CORS resources
-avatar: 
+avatar: /assets/img/favicons/image.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -52,7 +46,6 @@ social_preview_image: # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
-
 
 paginate: 10
 
