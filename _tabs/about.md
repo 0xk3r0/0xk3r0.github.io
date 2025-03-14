@@ -8,3 +8,4 @@ A dedicated **Penetration Tester** with over **2 years of hands-on experience** 
 I have practical experience gained from internships at **Digital Egypt Pioneers Institute** and **WE INNOVATE**, where I conducted comprehensive vulnerability assessments and enhanced application security by collaborating with development teams.  
 
 I actively share my knowledge and findings through publications on **Medium** and my personal **website**. I aim to continuously enhance my skills in **offensive security and red teaming**.
+
