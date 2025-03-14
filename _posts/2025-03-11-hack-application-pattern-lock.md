@@ -3,7 +3,7 @@ layout: post
 title: Hack Application Pattern Lock
 date: 2025-03-11 16:55 +0200
 categories: Mobile 
-tags: android-hacking
+tags: Android-Hacking Mobile
 ---
 
 Is locking your phone or any application using a pattern lock truly safe from cracking?
