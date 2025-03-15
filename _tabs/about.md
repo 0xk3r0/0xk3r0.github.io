@@ -9,4 +9,4 @@ I have practical experience gained from internships at **Digital Egypt Pioneers 
 
 I actively share my knowledge and findings through publications on **Medium** and my personal **website**. I aim to continuously enhance my skills in **offensive security and red teaming**.
 
-![view cv](https://0xk3r0.github.io/Kyrillos-Nady-Resume.pdf)
+- 📄 [View My CV](https://0xk3r0.github.io/Kyrillos-Nady-Resume.pdf)
