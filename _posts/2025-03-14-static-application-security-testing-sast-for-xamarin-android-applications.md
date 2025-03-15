@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Static Application Security Testing (SAST) for Xamarin Android Applications
+title: 'HackTheBox: SeeTheSharpFlag'
 date: 2025-03-14 23:48 +0200
 categories: Mobile
 tags: Android Mobile HackTheBox
