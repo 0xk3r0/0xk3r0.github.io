@@ -19,6 +19,7 @@ By analyze the application further, I decompiled the APK using **JADX**.I found 
 However, searching for the validation logic in the source code did not yield immediate results. Instead, I observed multiple files and folders related to Xamarin.
 ![](https://miro.medium.com/v2/resize:fit:1054/format:webp/1*7Ey_nbR1_x1ZbG4vYbLlCg.png)
 
+---
 ## Understanding Xamarin.Android Architecture
 Xamarin.Android allows developers to build Android applications using C# .NET. The C# code is compiled into Intermediate Language (IL), which is then Just-In-Time (JIT) compiled to a **native assembly** when the application lucnch. Below is a rough architecture of Xamarin.Android:
 - Xamarin provides `.NET` bindings to `Android.*` and `Java.*` namespaces.
@@ -26,6 +27,7 @@ Xamarin.Android allows developers to build Android applications using C# .NET. T
 - Managed Callable Wrappers (**MCW**) and Android Callable Wrappers (**ACW**) facilitate communication between the Mono and ART environments.
 ![](https://miro.medium.com/v2/resize:fit:828/format:webp/1*XZjL4BARDkwkPriBACmvgg.png)
 
+---
 ## Locating the Application Logic
 Since the application logic is compiled into native libraries, I needed to find these files. Using `apktool`, I discovered the `.dll` files under `/unknown/assemblies`. With JADX, they were found in `resources/assemblies/`:
 ![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*iC2wQ6htxGq1qq_m3wZj4Q.png)
@@ -42,6 +44,8 @@ I then used the `xamarin-decompress` tool to decompress the library using [LZ4 b
 After decompression, running the `file` command again revealed it as a Portable Executable 32-bit (**PE32**) file.
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*FBQggc_s3f24Gno9IwrE_Q.png)
 I then opened the file using **dotPeek**, it was a .NET decompiler tool.
+
+---
 ## Extracting the Password Validation Logic
 Upon inspecting `SeeTheSharpFlag.dll` in dotPeek, I found a `MainPage` class containing a method named `Button_Clicked()`, which likely handles password validation.
 ![](https://miro.medium.com/v2/resize:fit:786/format:webp/1*buP9krYvxyYZvC3Mm7JmsA.png)
@@ -84,6 +88,7 @@ byte[] buffer = Convert.FromBase64String("sjAbajc4sWMUn6HJBSfQ39p2fNg2trMQ/MmTB5
 byte[] rgbKey = Convert.FromBase64String("6F+WzEp5QXoJV+iTli4Q==");
 byte[] rgbIV = Convert.FromBase64String("DZ6YaWJlZ26VmEEQ31A==");
 ```
+---
 ## Decrypting the Password
 The AES encryption used in the application employs `CBC mode` with Base64-encoded components.
 Below is a Python script to decrypt the expected password:
@@ -110,15 +115,18 @@ print("========================")
 print("==== Decrypted text:", plaintext)
 print("========================")
 ```
+---
 ## Extracting the Flag
 Running the script successfully decrypted the flag.
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*gRfin3mkAasGgSCNKTaptA.png)
 I then submitted it through the mobile app and received the Congratz message.
 ![](https://miro.medium.com/v2/resize:fit:1084/format:webp/1*1OAT1ZSQKtEJXbA6pcBRiQ.png)
 
+---
 ## Conclusion
 This challenge demonstrated how to analyze and reverse-engineer Xamarin applications using SAST techniques. By understanding Xamarin’s architecture and extracting native libraries.
 
+---
 For further reading, I highly recommend **Akshay Shinde’s** blog post on [Xamarin Reverse Engineering](https://www.appknox.com/blog/xamarin-reverse-engineering-a-guide-for-penetration-testers).
 
 **THANKS FOR READING ❤️**
