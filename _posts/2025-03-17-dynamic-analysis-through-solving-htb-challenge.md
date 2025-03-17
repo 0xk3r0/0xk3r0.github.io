@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Exploring Dynamic Analysis Through HTB Supermarket Mobile Challenge'
+title: 'Exploring Dynamic Analysis by Solving the HTB Supermarket Mobile Challenge'
 date: 2025-03-16 21:51 +0200
 categories: Mobile
 tags: Android HackTheBox Mobile
