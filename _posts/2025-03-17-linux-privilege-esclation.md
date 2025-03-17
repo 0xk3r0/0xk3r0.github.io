@@ -42,17 +42,14 @@ The “ps” command provides a few useful options.
 ## env
 The **`env`** command will show environmental variables.
 
-<img src="https://i.imgur.com/xsbohSd.png" alt="ps command output" />
-
+![](https://i.imgur.com/LWdJ8Fw.png)
 
 The PATH variable may have a compiler or a scripting language (e.g. Python) that could be used to run code on the target system or leveraged for privilege escalation.
 
 ## sudo -l
-
 The target system may be configured to allow users to run some (or all) commands with root privileges. The **`sudo -l`** command can be used to list all commands your user can run using **`sudo`**.
 
 ## ls
-
 One of the common commands used in Linux is probably **`ls`**.
 
 While looking for potential privilege escalation vectors, please remember to always use the **`ls`** command with the **`-la`** parameter. The example below shows how the “secret.txt” file can easily be missed using the **`ls`** or **`ls -l`** commands.
@@ -60,7 +57,6 @@ While looking for potential privilege escalation vectors, please remember to alw
 ![](https://i.imgur.com/2jOtOat.png)
 
 ## Id
-
 The **`id`** command will provide a general overview of the user’s privilege level and group memberships.
 
 It is worth remembering that the **`id`** command can also be used to obtain the same information for another user as seen below.
@@ -68,7 +64,6 @@ It is worth remembering that the **`id`** command can also be used to obtain t
 ![](https://i.imgur.com/YzfJliG.png)
 
 ## /etc/passwd
-
 Reading the **`/etc/passwd`** file can be an easy way to discover users on the system.
 
 ![](https://i.imgur.com/r6oYOEi.png)
@@ -82,11 +77,9 @@ Remember that this will return all users, some of which are system or service us
 ![](https://i.imgur.com/psxE6V4.png)
 
 ## history
-
 Looking at earlier commands with the **`history`** command can give us some idea about the target system and, albeit rarely, have stored information such as passwords or usernames.
 
 ## ifconfig
-
 The target system may be a pivoting point to another network. The **`ifconfig`** command will give us information about the network interfaces of the system. The example below shows the target system has three interfaces (eth0, tun0, and tun1). Our attacking machine can reach the eth0 interface but can not directly access the two other networks.
 
 ![](https://i.imgur.com/hcdZnwK.png)
@@ -96,7 +89,6 @@ This can be confirmed using the **`ip route`** command to see which network ro
 ![](https://i.imgur.com/PSrmz5O.png)
 
 ## netstat
-
 Following an initial check for existing interfaces and network routes, it is worth looking into existing communications. The **`netstat`** command can be used with several different options to gather information on existing connections.
 
 - **`netstat -a`**: shows all listening ports and established connections.
@@ -136,7 +128,6 @@ The **`netstat`** usage you will probably see most often in blog posts, write-
 ![](https://i.imgur.com/UxzLBRw.png)
 
 ## **find Command**
-
 Searching the target system for important information and potential privilege escalation vectors can be fruitful. The built-in “find” command is useful and worth keeping in your arsenal.
 
 Below are some useful examples for the “find” command.
@@ -188,11 +179,9 @@ Below is a short example used to find files that have the SUID bit set. The SUID
 - **`find / -perm -u=s -type f 2>/dev/null`**: Find files with the SUID bit, which allows us to run the file with a higher privilege level than the current user.
 
 ## **General Linux Commands**
-
 As we are in the Linux realm, familiarity with Linux commands, in general, will be very useful. Please spend some time getting comfortable with commands such as **`find`**, **`locate`**, **`grep`**, **`cut`**, **`sort`**, etc.
 
 ### Privilege Escalation: Kernel Exploits
-
 Privilege escalation ideally leads to root privileges. This can sometimes be achieved simply by exploiting an existing vulnerability, or in some cases by accessing another user account that has more privileges, information, or access.
 
 Unless a single vulnerability leads to a root shell, the privilege escalation process will rely on misconfigurations and lax permissions.
@@ -354,15 +343,12 @@ We notice that vim can be used with the following command and payload:
 This will launch a root shell as seen below;
 
 Cron jobs are used to run scripts or binaries at specific times. By default, they run with the privilege of their owners and not the current user. While properly configured cron jobs are not inherently vulnerable, they can provide a privilege escalation vector under some conditions.
-
 The idea is quite simple; if there is a scheduled task that runs with root privileges and we can change the script that will be run, then our script will run with root privileges.
 
 Cron job configurations are stored as crontabs (cron tables) to see the next time and date the task will run.
-
 Each user on the system have their crontab file and can run specific tasks whether they are logged in or not. As you can expect, our goal will be to find a cron job set by root and have it run our script, ideally a shell.
 
 Any user can read the file keeping system-wide cron jobs under **`/etc/crontab`**
-
 While CTF machines can have cron jobs running every minute or every 5 minutes, you will more often see tasks that run daily, weekly or monthly in penetration test engagements.
 
 ![](https://i.imgur.com/fwqPuHN.png)
@@ -372,11 +358,9 @@ You can see the **`backup.sh`** script was configured to run every minute. The
 ![](https://i.imgur.com/qlDj93R.png)
 
 As our current user can access this script, we can easily modify it to create a reverse shell, hopefully with root privileges.
-
 The script will use the tools available on the target system to launch a reverse shell.
 
 Two points to note;
-
 1. The command syntax will vary depending on the available tools. (e.g. **`nc`** will probably not support the **`e`** option you may have seen used in other cases)
 2. We should always prefer to start reverse shells, as we not want to compromise the system integrity during a real penetration testing engagement.
 
@@ -389,7 +373,6 @@ We will now run a listener on our attacking machine to receive the incoming conn
 ![](https://i.imgur.com/xwYXfY1.png)
 
 Crontab is always worth checking as it can sometimes lead to easy privilege escalation vectors. The following scenario is not uncommon in companies that do not have a certain cyber security maturity level:
-
 1. System administrators need to run a script at regular intervals.
 2. They create a cron job to do this
 3. After a while, the script becomes useless, and they delete it
@@ -523,7 +506,5 @@ The target system’s environment will influence the tool you will be able to us
 - **LES (Linux Exploit Suggester):** https://github.com/mzet-/linux-exploit-suggester
 - **Linux Smart Enumeration:** https://github.com/diego-treitos/linux-smart-enumeration
 - **Linux Priv Checker:** https://github.com/linted/linuxprivchecker
+- **Search For PrivEsc:** https://gtfobins.github.io/ 
 
-<aside>
-https://gtfobins.github.io/  → Search For PrivEsc 
-</aside>
