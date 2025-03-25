@@ -176,3 +176,19 @@ Require explicit permissions for sensitive activities.
 This writeup demonstrates how improper intent handling can expose vulnerabilities in Android applications. By crafting a malicious chain of intents, we successfully exploited the `IntentHandlerActivity` and `PermissionCheckerActivity`. This highlights the importance of secure coding practices to protect applications from intent-based attacks.
 
 **THANKS FOR READING ❤️**
+
+<script src="https://giscus.app/client.js"
+        data-repo="0xk3r0/0xk3r0.github.io"
+        data-repo-id="R_kgDOOGw3bQ"
+        data-category="General"
+        data-category-id="DIC_kwDOOGw3bc4CobRY"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
