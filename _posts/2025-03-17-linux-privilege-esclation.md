@@ -508,6 +508,8 @@ The target system’s environment will influence the tool you will be able to us
 - **Linux Priv Checker:** https://github.com/linted/linuxprivchecker
 - **Search For PrivEsc:** https://gtfobins.github.io/ 
 
+**THANKS FOR READING ❤️**
+
 <script src="https://giscus.app/client.js"
         data-repo="0xk3r0/0xk3r0.github.io"
         data-repo-id="R_kgDOOGw3bQ"
