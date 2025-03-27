@@ -334,7 +334,7 @@ While apps cannot expose native Java methods in Custom Tabs, apps can still setu
 
 Websites can declare their association with an Android app, by [creating a Digital Asset Links](https://developers.google.com/digital-asset-links/v1/getting-started).
 
-For example [`.well-known/assetlinks.json`](https://google.com/.well-known/assetlinks.json) from Google shows that the app `com.google.android.googlequicksearchbox` is allowed to use [google.com](http://google.com/) as its origin.
+For example [`.well-known/assetlinks.json`](https://google.com/.well-known/assetlinks.json) from Google shows that the app `com.google.android.googlequicksearchbox` is allowed to use [google.com](https://google.com/) as its origin.
 
 ```json
 {
