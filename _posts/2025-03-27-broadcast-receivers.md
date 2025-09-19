@@ -83,18 +83,4 @@ Notifications can be easily [created](https://developer.android.com/develop/ui/
 
 **THANKS FOR READING ❤️**
 
-<script src="https://giscus.app/client.js"
-        data-repo="0xk3r0/0xk3r0.github.io"
-        data-repo-id="R_kgDOOGw3bQ"
-        data-category="General"
-        data-category-id="DIC_kwDOOGw3bc4CobRY"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
+

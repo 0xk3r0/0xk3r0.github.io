@@ -72,20 +72,3 @@ Try to read the source code if this API key loaded from native library —> .so 
 We use the jadx CLI to decompile the original and the updated APK into two different folders, and then compare them in VS Code.
 
 **THANKS FOR READING ❤️**
-
-<script src="https://giscus.app/client.js"
-        data-repo="0xk3r0/0xk3r0.github.io"
-        data-repo-id="R_kgDOOGw3bQ"
-        data-category="General"
-        data-category-id="DIC_kwDOOGw3bc4CobRY"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-

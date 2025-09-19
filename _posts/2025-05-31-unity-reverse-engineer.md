@@ -3,7 +3,7 @@ layout: post
 title: Hacking a Unity Game Using dnSpy
 date: 2025-05-31 10:50 +0300
 categories: Reverse-Engineer
-tags: RE Disktop-Pentest
+tags: RE TC-Pentest
 ---
 
 Hi everyone! In this article, I’ll walk you through an example of hacking a Unity application using a tool called **dnSpy**. The target? A Unity game developed by my friend **George**.
@@ -108,19 +108,3 @@ And NOW — I’m now invincible in the game. The zombies keep attacking, but I 
 ![](https://miro.medium.com/v2/format:webp/1*WzOhMDh41DHt7BXc8j1z0g.png)
 
 **THANKS FOR READING ❤️**
-
-<script src="https://giscus.app/client.js"
-        data-repo="0xk3r0/0xk3r0.github.io"
-        data-repo-id="R_kgDOOGw3bQ"
-        data-category="General"
-        data-category-id="DIC_kwDOOGw3bc4CobRY"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
