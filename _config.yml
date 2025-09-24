@@ -69,17 +69,6 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# Collecting analytics about blogs
-google_analytics:
-  id: 'G-DHTF99SFNK'          # Fill with your Google Analytics ID
-  pv:
-    # The Google Analytics pageviews switch.
-    enabled: false
-    # the next options only valid when `google_analytics.pv` is enabled.
-    proxy_url: ''
-    proxy_endpoint: ''
-    cache: false  # pv data local cache, good for the users from GFW area.
-
 collections:
   tabs:
     output: true
