@@ -3,7 +3,7 @@ layout: post
 title: 'Exploring Dynamic Analysis by Solving the HTB Supermarket Mobile Challenge'
 date: 2025-03-16 21:51 +0200
 categories: Mobile
-tags: Android HackTheBox Mobile
+tags: android HackTheBox Mobile
 ---
 Understanding Dynamic Application Security Testing (DAST) for mobile applications is essential to comprehend the communication between the app and other resources like shared object (`.so`) libraries. In this challenge, we will use the `Objection` tool, a powerful mobile tool for dynamic analysis, offering features like SSL Pinning, Root Detection Bypass, and more.
 
